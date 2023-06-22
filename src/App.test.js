@@ -10,8 +10,8 @@ describe('Testing counter app', () => {
     render(<App />);
 
     const element = screen.getByText('React Counter');
-    // screen.debug();
-    console.log(prettyDOM(element));
+    screen.debug();
+    // console.log(prettyDOM(element));
 
     // expect(element).toBeDefined();
   });

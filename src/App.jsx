@@ -1,17 +1,8 @@
-import { useState } from 'react';
-import Button from '@mui/material/Button';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import React, { useState } from 'react';
+import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import './App.css';
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   const [counter, setCounter] = useState(0);
   const [memory, setMemory] = useState([]);
 
@@ -34,8 +25,9 @@ function App() {
   const save = () => {
     setMemory([counter, ...memory]);
   };
+
   return (
-    <>
+    <div>
       <div>
         <h1>React Counter</h1>
       </div>
@@ -86,7 +78,7 @@ function App() {
           </TableContainer>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
