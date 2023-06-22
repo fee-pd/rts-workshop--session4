@@ -33,25 +33,26 @@ function App() {
       </div>
       <div className="card">
         <Button
-          onClick={() => increase}
+          onClick={() => increase()}
           variant="outlined"
           className="spaceBtns"
         >
           +
         </Button>
-        <button>Count is {counter}</button>
+        <p>Count is {counter}</p>
         <Button onClick={() => decrease()} variant="outlined" className="spaceBtns">
           -
         </Button>
+        
+        <div>
         <div className="btn__container">
-          <Button onClick={() => reset} variant="contained">
+          <Button onClick={() => reset()} variant="contained">
             Reset
           </Button>
-          <Button onClick={() => save} variant="contained" sx={{ bgcolor: 'green' }}>
+          <Button onClick={() => save()} variant="contained" sx={{ bgcolor: 'green' }}>
             Save Data
           </Button>
         </div>
-        <div>
           <TableContainer
             component={Paper}
             sx={{ width: 300, margin: '2rem auto' }}
