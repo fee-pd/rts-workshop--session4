@@ -46,10 +46,10 @@ function App() {
         
         <div>
         <div className="btn__container">
-          <Button onClick={() => reset()} variant="contained">
+          <Button data-testid="reset" onClick={() => reset()} variant="contained">
             Reset
           </Button>
-          <Button onClick={() => save()} variant="contained" sx={{ bgcolor: 'green' }}>
+          <Button data-testid="save" onClick={() => save()} variant="contained" sx={{ bgcolor: 'green' }}>
             Save Data
           </Button>
         </div>
@@ -60,7 +60,7 @@ function App() {
             <Table sx={{ width: 300 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell>Data</TableCell>
+                  <TableCell role="columnheader">Data</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -69,7 +69,7 @@ function App() {
                     key={0}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
+                    <TableCell component="th" scope="row" role="cell">
                       {row}
                     </TableCell>
                   </TableRow>
