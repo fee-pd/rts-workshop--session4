@@ -4,12 +4,13 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('Testing counter app', () => {
+
   beforeEach(() => {
     render(<App />);
-
     // Aquí inicializamos el contador con un más 1.
     fireEvent.click(screen.getByText('+'));
   });
+
   it('Should render App', () => {
     const element = screen.getByText('React Counter');
     // screen.debug();
